@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff Portal Login</title>
+  <link rel="icon" href="../images/School-logo.png">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/login_stylesheet.css">
+  
+
+</head>
+
+<body>
+  
+  <!--Creating the mainspace and log in form-->
+
+<div id="mainspace">
+    
+    <div id="flexbox1">
+        
+        <form action="../php/login.php" method = "post">
+        
+        <div id="header_center">
+        <h2>Staff Login</h2>
+        
+        <img src="../images/School-logo.png" alt="Wearview Academy logo">
+        </div>
+        
+        
+        <div id="flexboxinputs">
+        <label class =label for="user" id =labeluser>Username</label>
+        <br>
+        <input type="text" name="user" id="user" required>
+        <br>
+        <label class=label for="pass" id="labelpassword">Password</label>
+        <br>
+        <input type="password" name="pass" id="pass" required>
+        </div>
+
+        <div class = "log">
+        <input type="submit" value="Login" name="submit" class="login-buttn">
+        </div>
+
+        </form>
+
+    </div>
+
+    </div>
+
+
+
+</body>
+</html>

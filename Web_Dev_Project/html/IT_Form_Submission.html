@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff IT Issue Logging Form</title>
+  <link rel="icon" href="../images/School-logo.png">
+
+  <!-- Implementing the normalize.css framework before my css styling to ensure browser compatibility-->
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/Stylesheet_AT1.css">
+
+  <!--Javascript implementation is shown below in the script field -->
+
+  <script>
+    // This function ensures that the alert letting staff know their request has been submitted is only displayed if all form fields are filled in correctly//
+    function submitfunction() {
+      var staffname = document.getElementById("staff_name").value;
+      var staffemail = document.getElementById("staff_email").value;
+      var describe = document.getElementById("describe_your_issue").value;
+
+      if (staffname == "") {
+        alert("Fill in all fields of the form");
+        return;
+      }
+
+      if (staffemail == "") {
+        alert("Fill in all fields of the form");
+        return;
+      }
+      if (describe == "") {
+        alert("Fill in all fields of the form");
+        return;
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <!--top header area including navigation bar-->
+  <header>
+    <div id="flexbx1">
+      <img src="../images/School-logo.png" alt="Wearview Academy Logo" height="150" width="150" id="logo">
+    </div>
+
+    <!-- These have been left as blank hrefs for now as this is still a prototype system these functionalities can be added later-->
+    <div id="flexbx2">
+      <nav>
+        <a href="#">Staff List</a>
+        <a href="#">Calendar</a>
+        <a href="#">Students</a>
+        <a href="https://24m74bi64oi.uoswebspace.co.uk/BI64OI_AT2/html/login.html" id="logout">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <div id="box">
+    <h1><strong>Staff IT Issue Logging Form</strong></h1>
+  </div>
+
+  <!-- background div of the main space and the form itself-->
+
+  <div id="mainspace">
+    <div id="formspace">
+
+      <div id="form">
+        <form action="../php/form_submit.php" method="post">
+
+          <label for="staff_name">Staff Name</label>
+          <br>
+          <input type="text" id="staff_name" name="staff_name" placeholder="First and last name" required>
+          <br>
+          <label for="staff_email">Staff Email</label>
+          <br>
+          <input type="email" id="staff_email" name="staff_email" placeholder="Staff email address" required>
+          <br>
+          <label for = "issue_location">Issue Location</label>
+          <br>
+          <input type = "text" id = "issue_location" name = "issue_location" placeholder="Location of issue" required>
+          <br>
+          <label for="describe_your_issue" id="describe_label">Please describe the issue so we can help</label>
+          <br>
+          <textarea id="describe_your_issue" name="describe_your_issue" placeholder="Tell us about your issue"
+            required></textarea>
+          <br>
+          <br>
+
+          <label for="priority">Number of staff this issue effects?</label>
+          <select id="priority" name="priority">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+
+          <br>
+          <br>
+          <br>
+          <br>
+
+          <input type="submit" id="submit" onclick="submitfunction()">
+          <input type="reset" id="reset">
+
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

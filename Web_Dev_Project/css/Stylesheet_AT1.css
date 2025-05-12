@@ -1,0 +1,167 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+
+/*styling the first header and navigation menu*/
+
+header{
+  display:flex;
+  flex-direction: row;
+  height: 150px;
+  width: 100%;
+  background-color: #002a62;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+#flexbx2{
+  width: 100%;
+  align-content: center;
+}
+
+nav{
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+nav a{
+  color: white;
+  text-decoration: none;
+  font-family: sans-serif;
+  
+}
+
+nav a:hover {
+  background-color: #90b2c4;
+}
+
+#box {
+  display: block;
+  background-color: #002a62;
+  margin-top: 0;
+}
+
+h1 {
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/*styling the form area*/
+
+#mainspace{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: auto;
+  background-color: #002a62;
+  margin-top: 5px;
+  padding-top: 5px;
+}
+
+#formspace{
+  display: flex;
+  flex-direction: column;
+  background-color: #90b2c4;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 10px;
+  margin: auto;
+  min-width: 75%;
+  box-shadow: 0 0 5px 5px #e8e8e8;
+}
+
+#form{
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  align-items: center;
+  justify-content:center;
+}
+
+form{
+  width: 100%;
+  text-align: center;
+}
+
+
+label{
+  background-color: #002a62;
+  font-family: sans-serif;
+  color: white;
+  width: 100%;
+  padding-bottom: 5px;
+
+}
+
+#third{
+  width: 450px;
+}
+
+
+textarea{
+  margin-top: 10px;
+  resize:none;
+  height:300px;
+  width: 75%;
+  }
+
+input{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#buttons{margin-top: 20px;}
+/* I have changed my approach to responsiveness since assessment one. I will now manually check the page using developer tools and find the first breakpoint
+ I found that the page presents well until screen width falls below 1024px so I will set up a media query to deal with devices below this width */
+
+@media screen and (max-width: 768px) {
+
+  header{
+    display:flex;
+    flex-direction: column;
+    height: 200px;
+    width: 100%;
+    background-color: #002a62;
+    margin-bottom: 0px;
+    text-align: center;
+  }
+  
+  #flexbx2{
+    width: 100%;
+    align-content: center;
+  }
+  
+  nav{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+  }
+
+  #describe_label {
+    height: 80px;
+  }
+
+  #describe_your_issue {
+    width: 95%;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:1025px) {
+
+  nav a{
+    font-size: 20px;
+  }
+
+  form{
+    font-size:30px;
+  }
+}
+
